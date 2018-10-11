@@ -8,10 +8,7 @@ var tailleString = function (texte) {
     return lengthOfString;
 }
 var remplaceECar = function (texte) {
-    String.prototype.replaceAt=function(index, replacement) {
-    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
-    }
-    return texte.replaceAt(1, ' ');
+    return texte.replace('e',' ');
 }
 var concatString = function (texte1, texte2) {
     var texte3 = texte1+texte2;
@@ -38,11 +35,7 @@ var SupprEspaceString = function (texte) {
     return shrinkedTxt;
 }
 var IsString = function (texte) {
-    if(typeof texte == 'string'){
-      return true;
-    } else {
-      return false;
-    }
+    return typeof texte === 'string';
 }
 var AfficherExtensionString = function (texte) {
     var extFile = texte.split('.').pop();
