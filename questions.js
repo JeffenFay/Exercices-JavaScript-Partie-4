@@ -31,7 +31,7 @@ var minusculeString = function (texte) {
     return texteLoCase;
 }
 var SupprEspaceString = function (texte) {
-    var shrinkedTxt = texte.substr(1,texte.length-2);
+    var shrinkedTxt = texte.trim();
     return shrinkedTxt;
 }
 var IsString = function (texte) {
