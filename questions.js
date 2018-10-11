@@ -42,13 +42,8 @@ var AfficherExtensionString = function (texte) {
     return extFile;
 }
 var NombreEspaceString = function (texte) {
-    var countSpace=0;
-    for (i=0;i<texte.length;i++){
-      if (texte.substr(i,1)==' '){
-        countSpace++;
-      }
-    }
-    return countSpace;
+
+    return texte.split(' ').length-1;
 }
 var InverseString = function (texte) {
     var reversedTxt = texte.split("").reverse().join("");
