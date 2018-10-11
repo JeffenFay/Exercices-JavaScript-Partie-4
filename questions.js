@@ -1,63 +1,94 @@
 /**
  * Exercice sur les chaines de caractères.
  * Trouvez la façon de faire la plus optimal.
- * Il peut y avoir plusieur façon de faire. 
+ * Il peut y avoir plusieur façon de faire.
  */
 var tailleString = function (texte) {
-    return 'A completer';
+    var lengthOfString=texte.length;
+    return lengthOfString;
 }
 var remplaceECar = function (texte) {
-    return 'A completer';
+    String.prototype.replaceAt=function(index, replacement) {
+    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+    }
+    return texte.replaceAt(1, ' ');
 }
 var concatString = function (texte1, texte2) {
-    return 'A completer';
+    var texte3 = texte1+texte2;
+    return texte3;
 }
 var afficherCar5 = function (texte) {
-    return 'A completer';
+    var texteChar5 = texte.substr(4,1);
+    return texteChar5;
 }
 var afficher9Car = function (texte) {
-    return 'A completer';
+    var texteChar1to9 = texte.substr(0,9);
+    return texteChar1to9;
 }
 var majusculeString = function (texte) {
-    return 'A completer';
+    var texteUpCase = texte.toUpperCase();
+    return texteUpCase;
 }
 var minusculeString = function (texte) {
-    return 'A completer';
+    var texteLoCase = texte.toLowerCase();
+    return texteLoCase;
 }
 var SupprEspaceString = function (texte) {
-    return 'A completer';
+    var shrinkedTxt = texte.substr(1,texte.length-2);
+    return shrinkedTxt;
 }
 var IsString = function (texte) {
-    return 'A completer';
+    if(typeof texte == 'string'){
+      return true;
+    } else {
+      return false;
+    }
 }
 var AfficherExtensionString = function (texte) {
-    return 'A completer';
+    var extFile = texte.split('.').pop();
+    return extFile;
 }
 var NombreEspaceString = function (texte) {
-    return 'A completer';
+    var countSpace=0;
+    for (i=0;i<texte.length;i++){
+      if (texte.substr(i,1)==' '){
+        countSpace++;
+      }
+    }
+    return countSpace;
 }
 var InverseString = function (texte) {
-    return 'A completer';
+    var reversedTxt = texte.split("").reverse().join("");
+    return reversedTxt;
 }
 
 /**
  * Exercices sur les nombres et les caluls mathématiques
  */
 var calculPuissance = function (x, y) {
-    return 'A completer';
+    var powered = Math.pow(x, y);
+    return powered;
 }
 var valeurAbsolue = function (nombre) {
-    return 'A completer';
+    var absoluted = Math.abs(nombre);
+    return absoluted;
 }
 var valeurAbsolueArray = function (array) {
-    return 'A completer';
+    for (i=0;i<array.length;i++){
+      array[i]=Math.abs(array[i]);
+    }
+    return array;
 }
 var sufaceCercle = function (rayon) {
-    return 'A completer';
+    var surfAs = Math.round(Math.PI*Math.pow(rayon,2));
+    return surfAs;
 }
 var hypothenuse = function (ab, ac) {
-    return 'A completer';
+    var hypothenuse= Math.hypot(ab,ac);
+    return hypothenuse;
 }
 var calculIMC = function (poids, taille) {
-    return 'A completer';
+    var imc = parseFloat(poids/Math.pow(taille,2)).toFixed(2);
+    imc = parseFloat(imc);
+    return imc;
 }
