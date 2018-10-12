@@ -76,7 +76,6 @@ var hypothenuse = function (ab, ac) {
     return hypothenuse;
 }
 var calculIMC = function (poids, taille) {
-    var imc = parseFloat(poids/Math.pow(taille,2)).toFixed(2);
-    imc = parseFloat(imc);
+    var imc = Number((poids/Math.pow(taille,2)).toFixed(2));
     return imc;
 }
